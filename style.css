@@ -1,0 +1,248 @@
+/* style.css */
+
+/* Reset-ish */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    margin: 0;
+    background: #f1f4f8;
+    color: #222;
+}
+
+a {
+    color: #2b80ff;
+}
+
+/* Layout */
+.sidebar {
+    width: 240px;
+    background: #ffffff;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 28px 18px;
+    box-shadow: 0 6px 24px rgba(20, 30, 60, 0.06);
+}
+
+.sidebar .logo {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+.sidebar nav a {
+    display: block;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #335;
+}
+
+.sidebar nav a.active,
+.sidebar nav a:hover {
+    background: #2b80ff;
+    color: #fff;
+}
+
+.main {
+    margin-left: 260px;
+    padding: 30px;
+}
+
+header h1 {
+    margin: 0 0 16px 0;
+    font-size: 22px;
+}
+
+/* Overview cards */
+.overview {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 22px;
+}
+
+.overview .card {
+    background: #fff;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(20, 30, 60, 0.05);
+    flex: 1;
+}
+
+.overview .card .label {
+    color: #777;
+    font-size: 13px;
+}
+
+.overview .card .value {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 6px;
+}
+
+/* Primary button */
+.btn {
+    display: inline-block;
+    background: #2b80ff;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #1e5fd6;
+}
+
+/* Table */
+.table-wrap {
+    background: transparent;
+}
+
+table.list {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 24px rgba(20, 30, 60, 0.04);
+}
+
+table.list thead th {
+    background: #f6f9fc;
+    padding: 14px;
+    text-align: left;
+    font-size: 14px;
+}
+
+table.list td {
+    padding: 14px;
+    border-bottom: 1px solid #f0f2f5;
+}
+
+.action-links a {
+    margin-right: 8px;
+    text-decoration: none;
+}
+
+/* Forms */
+.form-row {
+    margin-bottom: 12px;
+}
+
+label.input {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="time"],
+input[type="date"] {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    width: 100%;
+}
+
+/* small responsiveness */
+@media (max-width:900px) {
+    .sidebar {
+        display: none;
+    }
+
+    .main {
+        margin-left: 20px;
+    }
+
+    .overview {
+        flex-direction: column;
+    }
+}
+
+/* AUTH PAGE DESIGN */
+.auth-body {
+    background: #eef1f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.auth-box {
+    width: 380px;
+    background: #fff;
+    padding: 32px;
+    border-radius: 14px;
+    box-shadow: 0 6px 24px rgba(20, 30, 60, 0.08);
+}
+
+.auth-title {
+    font-size: 24px;
+    margin: 0;
+    margin-bottom: 6px;
+}
+
+.auth-subtitle {
+    font-size: 14px;
+    margin: 0 0 20px 0;
+    color: #666;
+}
+
+.input-label {
+    font-size: 14px;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #dce3eb;
+    background: #f9fbfd;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.input-field:focus {
+    border-color: #2b80ff;
+    outline: none;
+    background: #fff;
+}
+
+.auth-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 8px;
+}
+
+.auth-error {
+    background: #ffd0d0;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 6px;
+    margin-bottom: 14px;
+    color: #960000;
+}
+
+.auth-success {
+    background: #d8ffd8;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 6px;
+    margin-bottom: 14px;
+    color: #067a06;
+}
+
+.auth-footer {
+    margin-top: 14px;
+    text-align: center;
+}
